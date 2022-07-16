@@ -16,7 +16,6 @@ function getAll() {
 }
 
 function getOne(id) {
-  // URL params are strings - convert to a number
   id = parseInt(id);
   return skills.find(skill => skill.id === id);
 }
@@ -28,7 +27,8 @@ function create(skill) {
 }
 
 function deleteOne(id) {
-  const idx = skills.findIndex(skill => skill.id === parseInt(id));
+  id = parseInt(id);
+  const idx = skills.findIndex(skill => skill.id === id);
   skills.splice(idx, 1);
 }
 

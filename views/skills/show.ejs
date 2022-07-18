@@ -4,7 +4,7 @@
   <h3><%= sk.skill %></h3>
   <h3><%= sk.learned ? 'Complete' : 'Incomplete' %></h3>
   <form
-          action="/skills/<% sk.id %>?_method=DELETE"
+          action="/skills/<%= sk.id %>?_method=DELETE"
           class="delete-form"
           method="POST"
   >
